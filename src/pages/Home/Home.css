@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --brand-color: #e6007a;
+  --blue-color: #1b95e0;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+}
+
+
+/* home css  */
+
+.herohome {
+    height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  .Find{
+    font-family: poppins;
+    color: #c4c4c4;
+    font-family: "Open Sans", sans-serif;
+  
+  }
+  
+  .herohome p {
+    font-size: 18px;
+    font-weight: 400;
+    color: #999;
+  }
+  
+  .herohome button {
+    background: linear-gradient(90deg, #FF4A67 13.54%, #FF6C83 100%);
+    color: #fff;
+    height: 51px;
+    line-height: 51px;
+    max-width: 173px;
+    width: 100%;
+    border-radius: 6px;
+    border: none;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .about{
+    background: #ffffff;
+    box-shadow: 0px 3px 90px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    padding: 2.5em;
+    max-width: 960px;
+    width: 100%;
+    margin: 3em auto;
+  }
+  .headi{
+    margin-top: 60px;
+
+  }
+  
+  .getstart{
+    left: 50px;
+  }
+  
+  
+  
+  
+ .about_event{
+    background: linear-gradient(90deg, #FF4A67 13.54%, #FF6C83 100%);
+    box-shadow: 0px 3px 90px rgba(0, 0, 0, 0.1);
+    border-radius: 6px;
+    max-width: 800px;
+    margin: 3em auto;
+   }  
+   
+
+
+/* box css  */
+
+section{
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  span{
+    color:white;
+  
+  }
+  
+  .event{
+  color: white;
+  
+  }
+  
+  .h4{
+    text-align: center;
+    margin-top: 20px;
+  }
+  

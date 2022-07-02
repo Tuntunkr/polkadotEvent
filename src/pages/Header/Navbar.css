@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --brand-color: #e6007a;
+  --blue-color: #1b95e0;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+}
+
+.headers{
+  color: #ff889b;
+  margin-block-start:auto ;
+  position: relative;
+
+  /* ms-auto my-4 my-lg-0 */
+
+}
+.logo{
+    margin-left: 30px2q;
+    font: normal normal normal 23px/34px Poppins;
+
+}
+
+.menu{
+    color: #ff889b !important;
+    font: normal normal normal 23px/34px Poppins;
+
+}
+
+#navbarScrollingDropdown{
+  color: #ff889b;
+  font: normal normal normal 23px/34px Poppins;
+}
+  .navCta {
+    background: linear-gradient(90deg, #FF4A67 13.54%, #FF6C83 100%);
+  
+    color: #fff !important;
+    height: 40px;
+    line-height: 40px;
+    max-width: 120px;
+    border-radius: 6px;
+    border: none;
+    font-size: 10px;
+    /* font-weight: 700; */
+    padding: 0 20px !important;
+    margin-left: 25px;
+    font: normal normal normal 23px/34px Poppins;
+
+  }
+  
+  .navCtas{
+  
+    color: #FF4A67 !important;
+    border-color: #FF4A67;
+    border:3px solid #FF4A67;
+    font: normal normal normal 23px/34px Poppins;
+    height: 45px;
+    line-height: 45px;
+    max-width: 170px;
+    border-radius: 10px;
+    /* border: none; */
+    font-size: 16px;
+    font-weight: 700;
+    padding: 0 20px !important;
+    margin-left: 25px;
+  }
