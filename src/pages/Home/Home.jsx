@@ -1,8 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../Home/Home.css";
-import homeimage from "../../assets/Images/Home 1x.png"
-
+import homeimage from "../../assets/Images/Home 1x.png";
 
 function Home() {
   return (
@@ -16,9 +15,7 @@ function Home() {
                 <span className="Find">IN THE</span> POLKADOT{" "}
                 <span className="Find">ECOSYSTEM</span>
               </h1>
-              <p>
-                Polkadot ecosystem
-              </p>
+              <p>Polkadot ecosystem</p>
               <button className="getstart">Get Started</button>
             </Col>
             <Col md={6}>

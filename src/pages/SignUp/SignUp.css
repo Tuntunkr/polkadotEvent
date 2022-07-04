@@ -1,0 +1,78 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --brand-color: #e6007a;
+  --blue-color: #1b95e0;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+}
+
+/* signup css  */
+
+.bg {
+  background-color: #fadde2;
+  width: 250%;
+  /* height: 100%; */
+}
+.about {
+  width: 110%;
+  height: 93%;
+}
+
+.eye {
+  width: 80%;
+  border-radius: 7px;
+  padding: 12px;
+}
+.ep {
+  width: 80%;
+  border-radius: 7px;
+  padding: 12px;
+}
+
+.firstn {
+  width: 38%;
+  padding: 9px;
+}
+.inpu1 {
+  width: 38%;
+  margin-left: 300px;
+  position: relative;
+  top: -60px;
+  left: -47px;
+  padding: 9px;
+  
+}
+
+.inpu2 {
+  width: 38%;
+  margin-left: 300px;
+  position: relative;
+  top: -84px;
+  left: -51px;
+  padding: 9px;
+}
+
+.btn1 {
+  margin-left: 420px;
+  position: relative;
+  top: -30px;
+
+  left: -75px;
+  color: #ff889b;
+}
+
+.signin {
+  background: linear-gradient(90deg, #ff4a67 13.54%, #ff6c83 100%);
+  width: 80%;
+  border-radius: 7px;
+  padding: 12px;
+}

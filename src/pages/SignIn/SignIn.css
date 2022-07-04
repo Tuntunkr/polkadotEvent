@@ -1,0 +1,74 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --brand-color: #e6007a;
+  --blue-color: #1b95e0;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+}
+
+/* signin css */
+.sign {
+  color: #212121;
+  text-align: left;
+  font: normal normal medium 33px/50px Poppins;
+  letter-spacing: 0.33px;
+  color: #212121;
+  opacity: 1;
+}
+.heroSec {
+  height: 600px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.signabout {
+  background: #ffffff;
+  /* box-shadow: 0px 3px 90px rgba(0, 0, 0, 0.1); */
+  border-radius: 6px;
+  /* padding: 2.5em; */
+  max-width: 960px;
+  width: 100%;
+  margin: 3em auto;
+}
+
+.btn2 {
+  background: linear-gradient(90deg, #ff4a67 13.54%, #ff6c83 100%);
+  width: 80%;
+  border-radius: 7px;
+  padding: 12px;
+  /* margin-left: 20px; */
+
+  color: white;
+  /* border-radius: 30px; */
+}
+
+.bg1 {
+  background-color: #fadde2;
+  width: 235%;
+  margin-top: 50px;
+}
+
+.eyesign {
+  width: 80%;
+  padding: 15px;
+}
+
+.eyep {
+  width: 80%;
+  padding: 15px;
+}
+
+.goo {
+  width: 38%;
+  padding: 9px;
+}

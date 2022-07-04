@@ -26,13 +26,23 @@ body {
 }
 .logo{
     margin-left: 30px2q;
-    font: normal normal normal 23px/34px Poppins;
+    text-align: left;
+    font: normal normal 600 30px/46px Poppins;
+    letter-spacing: 0.3px;
+    color: #FE072F;
+    opacity: 1;
 
 }
 
 .menu{
-    color: #ff889b !important;
+    color: #FF889B !important;
+    color: var(--unnamed-color-ff889b);
+    text-align: left;
     font: normal normal normal 23px/34px Poppins;
+    letter-spacing: 0.23px;
+    color: #FF889B;
+    opacity: 1;
+    font-size: 1.3rem;
 
 }
 
@@ -42,18 +52,14 @@ body {
 }
   .navCta {
     background: linear-gradient(90deg, #FF4A67 13.54%, #FF6C83 100%);
-  
-    color: #fff !important;
-    height: 40px;
-    line-height: 40px;
-    max-width: 120px;
-    border-radius: 6px;
-    border: none;
-    font-size: 10px;
-    /* font-weight: 700; */
-    padding: 0 20px !important;
-    margin-left: 25px;
+    color: var(--unnamed-color-ffffff);
+    text-align: left;
     font: normal normal normal 23px/34px Poppins;
+    letter-spacing: 0.23px;
+    color: #FFFFFF;
+    border-radius: 10px;
+
+    opacity: 1;
 
   }
   

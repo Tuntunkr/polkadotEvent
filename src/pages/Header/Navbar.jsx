@@ -10,7 +10,7 @@ function Header() {
     <>
       <Navbar bg="white" expand="lg">
         <Container fluid>
-          <Navbar.Brand href="/">
+          <Navbar.Brand as={NavLink} to="/">
             <img className="logo" src={Logo} alt="" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="navbarScroll" />
