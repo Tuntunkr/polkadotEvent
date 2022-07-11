@@ -3,8 +3,21 @@ import { Col, Container, Row } from "react-bootstrap";
 import "../SignIn/SignIn.css";
 import Sign from "../../assets/Images/Signin.svg";
 import { Link } from "react-router-dom";
+import GoogleLogin from "react-google-login";
+import { Box, TextField } from "@mui/material";
+import {useForm} from "react-hook-form"
 
 function SignIn() {
+  const {register ,handleSubmit ,formState:{errors}} = useForm()
+  const onSubmit = (data) =>{
+    console.log(data)
+  }
+  const handleLogin = (result) => {
+    alert(result);
+  };
+  const handleFailure = (googledata) => {
+    console.log(googledata);
+  };
   return (
     <>
       <section className="heroSec">
@@ -16,44 +29,56 @@ function SignIn() {
                 <Link to="/signup" className="btn1">
                   SignUp
                 </Link>
-                <div>
-                  <input
-                    type="text"
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <Box mb={2}>
+                  <TextField
+                    sx={{ m: 2, display: "flex" }}
+                    id="outlined-basic"
+
                     className="eyesign"
-                    placeholder="Enter your email"
+                    label="Enter your email"
+                    variant="outlined"
+                    autoComplete="email"
+                    autoFocus
+                    {...register("email", {required: "Required field"})}
+                    error={!!errors?.email}
+                    helperText={errors?.email ? errors.email.message : null} 
+                    
+
                   />
-                  <br></br>
-                  <br></br>
-                  <input
-                    type="text"
+                  <TextField
+                    sx={{ m: 2, display: "flex" }}
+                    id="outlined-basic"
                     className="eyep"
-                    placeholder="Enter your password"
+                    label="Enter your password"
+                    variant="outlined"
+                    {...register("password", {required: "Required field"})}
+                    error={!!errors?.password}
+                    helperText={errors?.password ? errors.password.message : null}
                   />
+                  <button type="submit" className="btn2">Sign in Into Account</button>
+                </Box>
+              </form>
+
+
+                <div className="firstn">
+                  <GoogleLogin
+                    clientId="1097543493087-5b7m4ab2cjupu0v9mq06bps5k3n5k2lh.apps.googleusercontent.com"
+                    buttonText="Log in with Google"
+                    OnSucess={handleLogin}
+                    OnFailure={handleFailure}
+                    cookiesPolicy={"single_host_origin"}
+                  ></GoogleLogin>
                 </div>
                 <br></br>
 
-                <div>
-                  <button className="btn2">Sign in Into Account</button>
-                </div>
-                <br></br>
-                <spa>________________ OR ________________</spa>
-                <br></br>
-                <br></br>
-                <div>
-                  <input
-                    className="goo"
-                    type="text"
-                    placeholder="Sign in with Google"
-                  />
-                  <br></br>
-                  <br></br>
-                  <input
-                    className="inpu2"
-                    type="text"
-                    placeholder="Sign Up with Polkadot"
-                  />
-                </div>
+                <input
+                  className="inpu2"
+                  type="text"
+                  placeholder="Sign Up with Polkadot"
+                />
               </div>
+              {/* </div> */}
             </Col>
             <Col md={6}>
               <div>

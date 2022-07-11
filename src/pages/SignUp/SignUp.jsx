@@ -3,8 +3,22 @@ import { Container, Row, Col } from "react-bootstrap";
 import "./SignUp.css";
 import Signup from "../../assets/Images/Signup.svg";
 import { Link } from "react-router-dom";
+import GoogleLogin from "react-google-login";
+import { TextField ,Box} from "@mui/material";
+import {useForm} from "react-hook-form"
+
 
 function SignUp() {
+  const {register ,handleSubmit ,formState:{errors}} = useForm()
+  const onSubmit = (data) =>{
+    console.log(data)
+  }
+  const handleLogin = (result) => {
+    alert(result);
+  };
+  const handleFailure = (googledata) => {
+    console.log(googledata);
+  };
   return (
     <>
       <section className="heroSectio">
@@ -28,50 +42,74 @@ function SignUp() {
                 <Link to="/signin" className="btn1">
                   SignIn
                 </Link>
+                
                 <div>
-                  <input
-                    type="text"
+                <TextField
+                    sx={{ m: 2, }}
+                    id="outlined-basic"
                     className="firstn"
-                    placeholder="Enter first name"
+                    label="Enter first name "
+                    variant="outlined"
+                    {...register("Enterfirstname", {required: "Required field"})}
+                    error={!!errors?.Enterfirstname}
+                    helperText={errors?.Enterfirstname ? errors.Enterfirstname.message : null}
+                    
                   />
-                </div>
-                <div>
-                  <input
+                  <TextField
+                    sx={{ m: 2, }}
+                    id="outlined-basic"
                     className="inpu1"
-                    type="text"
-                    placeholder="Enter last name"
+                    label="Enter last name"
+                    variant="outlined"
+                    {...register("Enterlastname", {required: "Required field"})}
+                    error={!!errors?.Enterlastname}
+                    helperText={errors?.Enterlastname ? errors.Enterlastname.message : null}
                   />
-                </div>
+                  </div>
+                  <form onSubmit={handleSubmit(onSubmit)}>
+                <Box mb={2}>
+                  <TextField
+                    sx={{ m: 2, display: "flex" }}
+                    id="outlined-basic"
+                    className="eyesign"
+                    label="Enter your email"
+                    variant="outlined"
+                    autoComplete="email"
+                    autoFocus
+                    {...register("email", {required: "Required field"})}
+                    error={!!errors?.email}
+                    helperText={errors?.email ? errors.email.message : null} 
+                    
+
+                  />
+                  <TextField
+                    sx={{ m: 2, display: "flex" }}
+                    id="outlined-basic"
+                    className="eyep"
+                    label="Enter your password"
+                    variant="outlined"
+                    {...register("password", {required: "Required field"})}
+                    error={!!errors?.password}
+                    helperText={errors?.password ? errors.password.message : null}
+                  />
+                  <button type="submit" className="btn2">Create Account</button>
+                </Box>
+              </form>
+
+                <br></br>
                 <div>
-                  <input
-                    type="text"
-                    className="eye"
-                    placeholder="Enter your email"
-                  />
+                  
+                  <div className="firstn">
+                    <GoogleLogin
+                      clientId="1097543493087-5b7m4ab2cjupu0v9mq06bps5k3n5k2lh.apps.googleusercontent.com"
+                      buttonText="Log in with Google"
+                      OnSucess={handleLogin}
+                      OnFailure={handleFailure}
+                      cookiesPolicy={"single_host_origin"}
+                    ></GoogleLogin>
+                  </div>
                   <br></br>
-                  <br></br>
-                  <input
-                    type="text"
-                    className="ep"
-                    placeholder="Enter password"
-                  />
-                </div>
-                <br></br>
-                <button className="signin">Create Account</button>
-                <br></br>
-                <br></br>
-                <sp>________________ OR _________________</sp>
-                <br></br>
-                <br></br>
-                <br></br>
-                <div>
-                  <input
-                    type="text"
-                    className="firstn"
-                    placeholder="Sign Up with Google"
-                  />
-                  <br></br>
-                  <br></br>
+
                   <input
                     className="inpu2"
                     type="text"

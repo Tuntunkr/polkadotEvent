@@ -2,6 +2,10 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../Home/Home.css";
 import homeimage from "../../assets/Images/Home 1x.png";
+import box from "../../assets/Images/bx-filter@2x.png"
+import Search from "../Search/Search";
+import HomeEvent from "../HomeEvent/HomeEvent";
+ 
 
 function Home() {
   return (
@@ -19,7 +23,7 @@ function Home() {
               <button className="getstart">Get Started</button>
             </Col>
             <Col md={6}>
-              <img src={homeimage} alt="/home" width="100%" />
+              <img  src={homeimage} alt="/home" width="100%" className="filter" />
             </Col>
           </Row>
         </Container>
@@ -42,6 +46,16 @@ function Home() {
                   <p>All Time Events</p>
                 </div>
               </section>
+            </div>
+            <div>
+            <h3>Crypto Event Calender</h3>
+            
+            </div>
+            <div>
+              <Search/>
+            </div>  
+            <div>
+              <HomeEvent/>
             </div>
           </Row>
         </Container>

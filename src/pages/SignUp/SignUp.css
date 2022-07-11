@@ -39,15 +39,23 @@ body {
 }
 
 .firstn {
-  width: 38%;
+  width: 40.5%;
   padding: 9px;
 }
+.flname{
+  display: flex;
+}
+
+sp{
+  margin-left: 20px;
+}
 .inpu1 {
-  width: 38%;
-  margin-left: 300px;
+  width: 40.5%;
+  /* margin-left: 300px; */
   position: relative;
-  top: -60px;
-  left: -47px;
+  /* top: -60px; */
+  left: px;
+  display: flex;
   padding: 9px;
   
 }
@@ -62,7 +70,7 @@ body {
 }
 
 .btn1 {
-  margin-left: 420px;
+  margin-left: 484px;
   position: relative;
   top: -30px;
 
