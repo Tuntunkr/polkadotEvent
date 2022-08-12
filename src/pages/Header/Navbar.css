@@ -34,16 +34,28 @@ body {
 }
 
 .menu{
+  /* position: relative; */
     color: #FF889B !important;
-    color: var(--unnamed-color-ff889b);
     text-align: left;
     font: normal normal normal 23px/34px Poppins;
     letter-spacing: 0.23px;
-    color: #FF889B;
     opacity: 1;
     font-size: 1.3rem;
 
 }
+/* .menu:after{
+content: '';
+padding: absolute;
+background-color: #e6007a;
+height: 3px;
+width: 0;
+left: 0;
+border: -10px;
+}
+
+.menu:hover{
+  width: 100%;
+} */
 
 #navbarScrollingDropdown{
   color: #ff889b;
@@ -71,7 +83,7 @@ body {
     border-radius: 10px;
     /* border: none; */
     font-size: 12px;
-    font-weight: 700;
+    font-weight: 700;           
     padding: 0 10px !important;
     margin-left: 30px;
   }

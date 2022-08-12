@@ -26,30 +26,30 @@ function Header() {
                 id="navbarScrollingDropdown"
                 className="headers"
               >
-                <NavDropdown.Item as={NavLink}  to='/' className="headers">
+                <Nav.Link as={NavLink}  to='/events' className="headers">
                   All events
-                </NavDropdown.Item>
+                </Nav.Link>
                 <NavDropdown.Divider />
-                <NavDropdown.Item as={NavLink}  to='/meetup' className="headers">
+                <Nav.Link as={NavLink}  to='/meetup' className="headers">
                   Meet Up
-                </NavDropdown.Item>
+                </Nav.Link>
                 <NavDropdown.Divider />
-                <NavDropdown.Item as={NavLink}  to='/hackathon' className="headers">
+                <Nav.Link as={NavLink}  to='/hackathon' className="headers">
                   Hackathon
-                </NavDropdown.Item>
+                </Nav.Link>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="/AddConference" className="headers">
+                <Nav.Link as={NavLink} to="/addConference" className="headers">
                   Conference
-                </NavDropdown.Item>
+                </Nav.Link>
                 <NavDropdown.Divider />
-                <NavDropdown.Item as={NavLink}  to='/webniars' className="headers">
+                <Nav.Link as={NavLink}  to='/webniars' className="headers">
                   Webinars
-                </NavDropdown.Item>
+                </Nav.Link>
                 <NavDropdown.Divider />
 
-                <NavDropdown.Item as={NavLink}  to='/ama' className="headers">
+                <Nav.Link as={NavLink}  to='/ama' className="headers">
                   AMA
-                </NavDropdown.Item>
+                </Nav.Link>
               </NavDropdown>
               <Nav.Link as={NavLink} to="/blog" className="menu">Blog</Nav.Link>
               <Nav.Link as={NavLink} to="/contactus" className="menu">Contact Us</Nav.Link>

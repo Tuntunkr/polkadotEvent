@@ -2,14 +2,22 @@ import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import "./AddConference.css";
 import Add from "../../assets/Images/Conference.svg";
-import { TextField, Box } from "@mui/material";
+import {
+  TextField,
+  Box,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  ListSubheader,
+} from "@mui/material";
 import { useForm } from "react-hook-form";
-import { DesktopDatePicker } from "@mui/x-date-pickers";
+import { Select, Option } from "@material-tailwind/react";
+import Footer from "../Footer/Footer";
 
 // import Footer from './Footer';
 
 function AddConference() {
-     const [value, setValue] = React.useState(null);
+  const [value, setValue] = React.useState(null);
   const {
     register,
     handleSubmit,
@@ -18,7 +26,7 @@ function AddConference() {
   const onSubmit = (data) => {
     console.log(data);
   };
-  
+
   return (
     <>
       <section className="addconf">
@@ -66,38 +74,68 @@ function AddConference() {
                           error={!!errors?.URL}
                           helperText={errors?.URL ? errors.URL.message : null}
                         />
+                        <FormControl sx={{ m: 2, fullwidth: 220 }}>
+                          <InputLabel htmlFor="grouped-native-select">
+                            Grouping
+                          </InputLabel>
+                          <Select
+                            native
+                            defaultValue=""
+                            id="grouped-native-select"
+                            label="Grouping"
+                          >
+                            <option aria-label="None" value="" />
+                            <optgroup label="Category 1">
+                              <option value={1}>Option 1</option>
+                              <option value={2}>Option 2</option>
+                            </optgroup>
+                            <optgroup label="Category 2">
+                              <option value={3}>Option 3</option>
+                              <option value={4}>Option 4</option>
+                            </optgroup>
+                          </Select>
+                        </FormControl>
+                        <FormControl sx={{ m: 1, fullwidth: 190 }}>
+                          <InputLabel htmlFor="grouped-select">
+                            Grouping
+                          </InputLabel>
+                          <Select
+                            defaultValue=""
+                            id="grouped-select"
+                            label="Grouping"
+                          >
+                            <MenuItem value="">
+                              <em>None</em>
+                            </MenuItem>
+                            <ListSubheader>Category 1</ListSubheader>
+                            <MenuItem value={1}>Option 1</MenuItem>
+                            <MenuItem value={2}>Option 2</MenuItem>
+                            <ListSubheader>Category 2</ListSubheader>
+                            <MenuItem value={3}>Option 3</MenuItem>
+                            <MenuItem value={4}>Option 4</MenuItem>
+                          </Select>
+                        </FormControl>
                       </Box>
                     </form>
                   </div>
-                  <div className="footer">
-                    <div className="left">
-                      <select name="cars" id="cars">
+
+                  {/* <select name="cars" id="cars">
                         <option value="Topic">Topic</option>
                         <option value="Polkadot">Polkadot</option>
                         <option value="Kusama">Kusama</option>
                         <option value="Bitcoin">Bitcoin</option>
-                      </select>
-                      <br />
-                      <input type="date" placeholder="Start Date" />
-                     
-                      <input type="text" placeholder="CPF  URL" />
-                      <input
-                        type="text"
-                        placeholder="Conference Twitter handle"
-                      />
-                    </div>
-                    <div className="right">
-                      <select name="cars" id="cars">
+                      </select> */}
+
+                  {/* <select name="cars" id="cars">
                         <option value="volvo">Location</option>
                         <option value="saab">Saab</option>
                         <option value="mercedes">Mercedes</option>
                         <option value="audi">Audi</option>
-                      </select>
-                      <input type="date" placeholder="Start Date" />
+                      </select> */}
+                  {/* <input type="date" placeholder="Start Date" />
                       <input type="date" placeholder="CPF  URL" />
-                      <input type="text" placeholder="Code of conduct URL" />
-                    </div>
-                  </div>
+                      <input type="text" placeholder="Code of conduct URL" /> */}
+
                   <br></br>
 
                   <div>
@@ -113,7 +151,7 @@ function AddConference() {
         </Container>
       </section>
 
-      {/* <Footer/> */}
+      <Footer />
     </>
   );
 }

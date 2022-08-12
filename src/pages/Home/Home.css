@@ -94,3 +94,8 @@ span {
   text-align: center;
   margin-top: 20px;
 }
+
+.filters{
+	color: #e6e6e6;
+  background: linear-gradient(90deg, #ff4a67 13.54%, #ff6c83 100%);
+}

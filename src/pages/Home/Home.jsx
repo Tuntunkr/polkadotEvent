@@ -2,12 +2,15 @@ import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../Home/Home.css";
 import homeimage from "../../assets/Images/Home 1x.png";
-import box from "../../assets/Images/bx-filter@2x.png"
 import Search from "../Search/Search";
-import HomeEvent from "../HomeEvent/HomeEvent";
+import Cards from "../../Card/Cards";
+import Calandars from "../Calendar/Calandars"
+import Footer from "../Footer/Footer";
  
 
 function Home() {
+ 
+  
   return (
     <>
       <section className="herohome">
@@ -15,8 +18,8 @@ function Home() {
           <Row>
             <Col md={6}>
               <h1 className="headi">
-                FIND <span className="Find">YOUR</span> NEXT TECH CONFERENCE{" "}
-                <span className="Find">IN THE</span> POLKADOT{" "}
+                FIND <span className="Find">YOUR</span> NEXT TECH CONFERENCE
+                <span className="Find">IN THE</span> POLKADOT
                 <span className="Find">ECOSYSTEM</span>
               </h1>
               <p>Polkadot ecosystem</p>
@@ -53,10 +56,20 @@ function Home() {
             </div>
             <div>
               <Search/>
+               
+         
             </div>  
             <div>
-              <HomeEvent/>
+              <Cards/>
+              <Cards/>
+              <Cards/>
+              <Cards/>
+              <Cards/>
+              <Cards/>
+              <Cards/>
             </div>
+            <Calandars/>
+            <Footer/>
           </Row>
         </Container>
       </div>

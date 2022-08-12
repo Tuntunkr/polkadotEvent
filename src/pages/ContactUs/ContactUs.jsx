@@ -1,10 +1,21 @@
+import { Box, TextField } from "@mui/material";
 import React from "react";
 import { Container, Row, Col, Button } from "react-bootstrap";
 import contact from "../../assets/Images/Contact.svg";
+import {useForm} from "react-hook-form"
+
 
 import "./ContactUs.css";
+import Footer from "../Footer/Footer";
 
 function ContactUs() {
+  const {register ,handleSubmit ,formState:{errors}} = useForm()
+  const onSubmit = (data) =>{
+    console.log(data)
+  }
+  const handleLogin = (result) => {
+    alert(result);
+  };
   return (
     <>
       <section className="heroCon">
@@ -17,27 +28,36 @@ function ContactUs() {
               {/* <span className='conatct'>-----------</span> */}
               {/* input */}
               <br></br>
-              <div>
-                <input
-                  type="text"
-                  className="eyn"
-                  placeholder="Enter your name"
-                />
-                <br />
-                <br />
-                <input
-                  type="email"
-                  className="eyp"
-                  placeholder="Enter your email"
-                />
-                <br />
-                <br />
-                <textarea
-                  className="masage"
-                  typeof="massage"
-                  placeholder="massage"
-                />
-              </div>
+              <form onSubmit={handleSubmit(onSubmit)}>
+                <Box mb={2}>
+                  <TextField
+                    sx={{ m: 2, display: "flex" }}
+                    id="outlined-basic"
+
+                    className="eyesign"
+                    label="Enter your name"
+                    variant="outlined"
+                    autoComplete="email"
+                    autoFocus
+                    {...register("email", {required: "Required field"})}
+                    error={!!errors?.email}
+                    helperText={errors?.email ? errors.email.message : null} 
+                    
+
+                  />
+                  <TextField
+                    sx={{ m: 2, display: "flex" }}
+                    id="outlined-basic"
+                    className="eyep"
+                    label="Enter your email"
+                    variant="outlined"
+                    {...register("password", {required: "Required field"})}
+                    error={!!errors?.password}
+                    helperText={errors?.password ? errors.password.message : null}
+                  />
+                 
+                </Box>
+              </form>
               <div>
                 <div>
                   <Button className="bt1">Submit</Button>
@@ -50,6 +70,7 @@ function ContactUs() {
           </Row>
         </Container>
       </section>
+      <Footer/>
     </>
   );
 }

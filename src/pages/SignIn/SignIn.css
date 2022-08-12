@@ -60,7 +60,7 @@ spa{
 .bg1 {
   background-color: #fadde2;
   width: 235%;
-  /* margin-top: 50px; */
+  margin-top: 50px;
 }
 
 .eyesign {
@@ -70,8 +70,7 @@ spa{
 
 .eyep {
   width: 35.5%;
-
-  /* padding: 15px; */
+  /* margin: 20px; */
 }
 
 .goo {

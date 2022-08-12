@@ -42,9 +42,10 @@ body {
 
 .bt1 {
   margin-top: 30px;
+  border: none;
   background: linear-gradient(90deg, #ff4a67 13.54%, #ff6c83 100%);
-  width: 40%;
-  margin-left: 80px;
+  width: 30%;
+  margin-left: 10px;
   border-radius: 7px;
   padding: 12px;
   color: white;
@@ -66,4 +67,10 @@ body {
 .cont {
   width: 80%;
   bottom: 40px;
+}
+
+@media (max-width: 767px) {
+  .heroCon .eyn .bt1 .cont {
+    width: 100%;
+  }
 }

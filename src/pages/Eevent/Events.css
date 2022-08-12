@@ -1,0 +1,184 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    background:#FFFFFF 0% 0% no-repeat padding-box;;
+    border-radius: 3px solid #7958D7;
+}
+
+
+.boxse{
+    display: flex;
+    float: left;
+     position: relative;
+     padding: .25rem;
+     border: 1px solid #ffffff;
+     border-radius: 10px;
+     text-decoration: none;
+     width: 40rem;
+     height: 390px;
+     border: 3px solid #E6E6E6;
+     margin: 10px;
+     word-break: break-word;
+     /* background: #ffffff */
+     background: #7958D7;
+ }
+ 
+ .imgBx img{
+     width: 20rem;
+     height: 100%;
+     border-radius: 4px;
+     
+ }
+ 
+ .box .content{
+     padding: 14px;
+     font-size:20px;
+ letter-spacing: 0.3px;
+ margin-left: 30px;
+ color: #212121;
+ opacity: 1;
+ }
+ 
+ 
+ .dates{
+     display: flex;
+     margin-left: 10px;
+ }
+ 
+ .eventgparagrapgh{
+     color: var(--unnamed-color-212121);
+ text-align: left;
+ /* font: normal normal normal 27px/40px Poppins; */
+ letter-spacing: 0.27px;
+ color: #212121;
+ opacity: 1;
+ }
+ 
+ 
+ @media (max-width: 767px) {
+     .services .content .box {
+       width: 100%;
+     }
+   }
+
+   @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+
+:root {
+  --brand-color: #e6007a;
+  --blue-color: #1b95e0;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+}
+
+.filterCards {
+  background: #ffffff;
+  box-shadow: 0px 3px 90px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 10rem;
+  display: flex;
+  /* position: sticky; */
+  border: 3px solid #E6E6E6;
+
+  /* top: 25px; */
+}
+
+.eventCard {
+  background: #ffffff;
+  box-shadow: 0px 3px 60px rgba(0, 0, 0, 0.1);
+  border-radius: 6px;
+  /* padding: 40px; */
+  position: relative;
+  margin-bottom: 40px;
+  cursor: pointer;
+  width: 600px;
+height: 300px;
+border: 3px solid #E6E6E6;
+border-radius: 4px;
+opacity: 1;
+}
+
+.recent{
+    /* background:url('img/matteo-catanese-PI8Hk-3ZcCU-unsplash.png') 0% 0% no-repeat padding-box; */
+    border-radius: 4px;
+    opacity: 1;
+}
+
+
+.Populartags{
+    background: transparent linear-gradient(99deg, #FF4A67 0%, #FF6C83 100%) 0% 0% no-repeat padding-box;
+    border-radius: 4px;
+opacity: 1;
+
+letter-spacing: 0.18px;
+color: #FFFFFF;
+opacity: 1;
+}
+
+
+@media screen and (max-width: 768px) {
+  .heroSection {
+    height: 100%;
+    padding: 50px 0;
+  }
+  .heroSection h1 {
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 40px;
+  }
+
+  .searchbarContainer {
+    margin-bottom: 10px;
+  }
+
+  .form-check-inline {
+    margin-right: 5px;
+  }
+
+  .filterCard {
+    margin-bottom: 20px;
+  }
+
+  .displayFlex {
+    display: block;
+  }
+
+  .eventDescription {
+    margin-top: 10px;
+  }
+  .filterCard {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+    .heroSection img {
+        display: none;
+      }
+}
+
+.cont-1{
+  text-align: center;
+  text-transform: capitalize;
+  padding: 300px;
+  
+}
+
+.cnt-1{
+  text-transform: capitalize;
+  color: black;
+  text-overflow: ellipsis;
+}
+
+.cnt-1 :hover{
+  text-transform: inherit;
+}
